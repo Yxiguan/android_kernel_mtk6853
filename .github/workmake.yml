@@ -5,6 +5,13 @@ name: 编译OPPO/Realme-安卓12-通用mt6853机型内核
 on:
   workflow_dispatch:
 
+  push:
+    branches:
+      - binder
+  pull_request:
+      branches:
+      - binder
+  
 jobs:
   build:
 
@@ -45,7 +52,7 @@ jobs:
     - name: 下载内核源码
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        git clone https://github.com/wu17481748/android_kernel_mtk6853 android-kernel
+        git clone git@github.com:Yxiguan/android_kernel_mtk6853.git -b binder android-kernel
         cd android-kernel
 
 
