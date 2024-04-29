@@ -4,6 +4,14 @@ name: 编译OPPO/Realme-安卓12-通用mt6853机型内核
 
 on:
   workflow_dispatch:
+
+  push:
+    branches:
+      - binder
+  pull_request:
+      branches:
+      - binder
+
   
 jobs:
   build:
