@@ -6,11 +6,9 @@ on:
   workflow_dispatch:
 
   push:
-    branches:
-      - binder
+      branches: ["binder"]
   pull_request:
-      branches:
-      - binder
+      branches: ["binder"]
 
   
 jobs:
